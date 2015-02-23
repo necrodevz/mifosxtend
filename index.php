@@ -28,7 +28,7 @@ and open the template in the editor.
                     <label for=\"username\" class=\"control-label\">Username</label><input name=\"username\" class=\"form-control\" required><br>
                 </div>
                 <div class=\"input-group\">
-                    <label for=\"password\" class=\"control-label\">Password</label><input name=\"password\" class=\"form-control password\" required><br>
+                    <label for=\"password\" class=\"control-label\">Password</label><input name=\"password\" class=\"form-control\" type=\"password\" required><br>
                 </div>
                 <div class=\"input-group\">
                     <label for=\"loan_id\" class=\"control-label\">Loan ID</label><input name=\"loan_id\" class=\"form-control\" required><br>
