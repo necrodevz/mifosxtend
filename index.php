@@ -11,6 +11,7 @@ and open the template in the editor.
         
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
         
         
     </head>
@@ -22,7 +23,7 @@ and open the template in the editor.
         "<div class=\"container-fluid\">
         <form action=\"schedule.php\" method=\"post\">
             <div class=\"form-group\">
-                <legend>Enter login and Loan ID</legend>
+                <legend>Enter Mifos Login and Loan ID</legend>
                 <div class=\"input-group\">
                     <label for=\"username\" class=\"control-label\">Username</label><input name=\"username\" class=\"form-control\" required><br>
                 </div>
