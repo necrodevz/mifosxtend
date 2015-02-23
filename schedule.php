@@ -23,7 +23,12 @@ and open the template in the editor.
         <?php 
         $schedule = jq::createSchedule();
         $details = jq::getDetails();
-        ?>
+        
+        if (!$schedule || !$details) { ?>
+        
+        <h1>Something Failed... <a href="index.php" class="btn btn-danger">try again</a>?</h1> 
+        
+        <?php }        ?>
         <div class="container-fluid" style="width: 900px;">
             <div class="panel">
                 <div class="img-responsive">
