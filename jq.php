@@ -55,7 +55,7 @@ class jq {
         
     }
 
-    private function calculateLoanSchedule($principal, $interestRatePerPeriod, $termFrequency, $repaymentEvery, $numberOfRepayments, $expectedFirstRepaymentDate) {
+    private function calculateLoanSchedule($principal, $interestRatePerPeriod, $termFrequency, $repaymentEvery, $numberOfRepayments, $expectedFirstRepaymentOnDate) {
         $rate = ($interestRatePerPeriod/52) * $repaymentEvery;
         $output = array();
         $installment = $principal/$numberOfRepayments;
@@ -63,9 +63,9 @@ class jq {
         $total = $installment + $interest;
         $int = ((4 / $repaymentEvery) * 7);
         if($repaymentEvery===2){
-            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentDate} - 14 days"));
+            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentOnDate} - 14 days"));
         } else {
-            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentDate} - 30 days"));
+            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentOnDate} - 30 days"));
         }
         
         for ($i= 0; $i < $numberOfRepayments; $i++) {
