@@ -69,11 +69,11 @@ class jq {
         }
         
         for ($i= 0; $i < $numberOfRepayments; $i++) {
-            if($repaymentEvery===2){
+            /*if($repaymentEvery===2){
                 $date = date("y-m-d", strtotime("{$date} + 14 days"));
             } else {
                 $date = date("y-m-d", strtotime("{$date} + 30 days"));
-            }
+            }*/
             //$fdate = new DateTime($date);
             array_push($output, array(
                 'cycle' => $i + 1,
