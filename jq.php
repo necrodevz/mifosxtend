@@ -62,6 +62,12 @@ class jq {
         $interest = $principal * ($rate/100);
         $total = $installment + $interest;
         $int = ((4 / $repaymentEvery) * 7);
+        if($repaymentEvery===2){
+            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentDate} - 14 days"));
+        } else {
+            $date = date("y-m-d", strtotime("{$expectedFirstRepaymentDate} - 30 days"));
+        }
+
         for ($i= 0; $i < $numberOfRepayments; $i++) {
             if($repaymentEvery===2){
                 $date = date("y-m-d", strtotime("{$date} + 14 days"));
