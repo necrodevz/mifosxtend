@@ -90,7 +90,7 @@ class jq {
   
     public static function createSchedule() {
         $json = self::getLoan();
-        $try = self::calculateLoanSchedule($json['principal'], $json['interestRatePerPeriod'], $json['termFrequency'], $json['repaymentEvery'], $json['numberOfRepayments'], implode("-", $json['expectedFirstRepaymentDate']));
+        $try = self::calculateLoanSchedule($json['principal'], $json['interestRatePerPeriod'], $json['termFrequency'], $json['repaymentEvery'], $json['numberOfRepayments'], implode("-", $json['expectedFirstRepaymentOnDate']));
     
         return $try;
     }
