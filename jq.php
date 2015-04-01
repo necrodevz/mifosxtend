@@ -77,7 +77,7 @@ class jq {
             $fdate = new DateTime($date);
             array_push($output, array(
                 'cycle' => $i + 1,
-                'date' => $fdate->format("dd-mm-yyyy"),
+                'date' => $fdate->format("d-M-Y"),
                 'installment' => $installment,
                 'interest' => $interest,
                 'total' => $total
